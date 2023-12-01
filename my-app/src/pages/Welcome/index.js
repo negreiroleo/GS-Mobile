@@ -7,21 +7,20 @@ import {
   TouchableOpacity
 } from "react-native";
 
- export default function Welcome() {
+export default function Welcome() {
   return (
-    <View style={style.container}>
+    <View style={styles.container}>
 
       <View style={styles.containerLogo}>
         <Image
          source={require('../../assets/logotipo.png')}
-         style={  {width: '100%'} }
+         style={{ width: '100%' }}
          resizeMode="contain"
         /> 
       </View>
 
-        <View style={styles.containerForm}>
-          <Text style={styles.title}>Seja Bem-Vindo ao For Life</Text>
-
+      <View style={styles.containerForm}>
+        <Text style={styles.title}>Seja Bem-Vindo ao For Life</Text>
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Entrar</Text>
@@ -30,7 +29,7 @@ import {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Cadastre-se</Text>
         </TouchableOpacity>
-        </View>
+      </View>
   
     </View>
   );
@@ -53,33 +52,31 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#000',
-    textalign: 'center',
-    fontfamily: 'Segoe UI',
-    fontsize: '64px',
-    fontstyle: 'normal',
-    fontweight: 400,
-    lineheight: 'normal',
-    width: '430px', 
+    textAlign: 'center',
+    fontFamily: 'Segoe UI',
+    fontSize: 32,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: 40,
+    width: 300,
   },
   button: {
-    borderradius: '8px',
-    background: '#000',
-    display: 'inlineflex',
-    padding: '16px',
-    flexdirection: 'column',
-    alignitems: 'flex-start',
-    gap: '10px',
+    borderRadius: 8,
+    backgroundColor: '#000',
+    display: 'flex',
+    padding: 16,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    marginVertical: 10,
   },
-
   buttonText: {
-    width: '140px',
+    width: 140,
     color: '#39DAFF',
-    textalign: 'center',
-    fontfamily: 'Segoe UI',
-    fontsize: '16px',
-    fontstyle: 'normal',
-    fontweight: 400,
-    lineheight: '24px', /* 150% */
+    textAlign: 'center',
+    fontFamily: 'Segoe UI',
+    fontSize: 16,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: 24,
   },
-
-  })
+});
