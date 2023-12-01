@@ -7,12 +7,20 @@ import {
   TouchableOpacity
 } from "react-native";
 
+import * as Animatable from 'react-native-animatable';
+
+import { useNavigation } from '@react-navigation/native';
+
 export default function Welcome() {
+
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
 
       <View style={styles.containerLogo}>
-      <Image
+      <Animatable.Image
+        animation="flipInY"
         source={require('../../assets/logo.png')}
         style={styles.logoImage}
       />
@@ -22,7 +30,10 @@ export default function Welcome() {
       <View style={styles.containerForm}>
         <Text style={styles.title}>Seja Bem-Vindo ao For Life</Text>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity 
+        style={styles.button}
+        onPress={() => navigation.navigate('SignIn')}
+        >
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
 
