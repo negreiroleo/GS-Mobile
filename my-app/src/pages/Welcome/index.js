@@ -12,11 +12,11 @@ export default function Welcome() {
     <View style={styles.container}>
 
       <View style={styles.containerLogo}>
-        <Image
-         source={require('../../assets/logotipo.png')}
-         style={{ width: '100%' }}
-         resizeMode="contain"
-        /> 
+      <Image
+        source={require('../../assets/logo.png')}
+        style={styles.logoImage}
+      />
+
       </View>
 
       <View style={styles.containerForm}>
@@ -39,16 +39,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#39DAFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20, // Espaçamento horizontal para o container
   },
   containerLogo: {
-    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 50, // Margem superior para acomodar a logo
   },
-  containerForm: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  logoImage: {
+    width: 200, // Largura da imagem
+    height: 200, // Altura da imagem
+    resizeMode: 'contain', // Ajuste da imagem para evitar distorção
+    marginBottom: 20, // Espaçamento inferior após a logo
   },
   title: {
     color: '#000',
@@ -59,6 +63,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     lineHeight: 40,
     width: 300,
+    marginBottom: 20, // Espaçamento inferior após o título
   },
   button: {
     borderRadius: 8,
@@ -68,9 +73,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'flex-start',
     marginVertical: 10,
+    width: '100%', // Largura total para os botões
   },
   buttonText: {
-    width: 140,
+    width: '100%',
     color: '#39DAFF',
     textAlign: 'center',
     fontFamily: 'Segoe UI',
@@ -80,3 +86,4 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
 });
+
