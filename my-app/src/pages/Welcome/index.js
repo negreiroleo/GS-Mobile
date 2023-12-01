@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
 
   buttonText: {
     width: '140px',
-    color: '#FFFF',
+    color: '#39DAFF',
     textalign: 'center',
     fontfamily: 'Segoe UI',
     fontsize: '16px',
